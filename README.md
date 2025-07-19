@@ -169,7 +169,7 @@ Please consider citing this work if you use our datasets or codes:
 ```plaintext
 @article{ma2025active,
   title={Active learning accelerates electrolyte solvent screening for anode-free lithium metal batteries},
-  author={Ma, Peiyuan, and Kumar, Ritesh and Wang, Ke-Hsin, Peiyuan and Amanchukwu, Chibueze V.},
+  author={Ma, Peiyuan, and Kumar, Ritesh and Wang, Ke-Hsin, and Amanchukwu, Chibueze V.},
   journal={Nature Communications},
   year={2025},
   doi={}
