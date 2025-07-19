@@ -87,6 +87,14 @@ The repository includes:
     │   ├── active_learning_batch_5.ipynb
     │   ├── active_learning_batch_6.ipynb
     │   └── active_learning_batch_7.ipynb
+    ├── active-learning_only-LFP-data
+    │   ├── active_learning_batch_1.ipynb
+    │   ├── active_learning_batch_2.ipynb
+    │   ├── active_learning_batch_3.ipynb
+    │   ├── active_learning_batch_4.ipynb
+    │   ├── active_learning_batch_5.ipynb
+    │   ├── active_learning_batch_6.ipynb
+    │   └── active_learning_batch_7.ipynb
     ├── manuscript-plots
     │   ├── functional_group_classification.ipynb
     │   ├── t-SNE_plot.ipynb
@@ -102,7 +110,7 @@ The following datasets are used in this project:
 1. **Virtual chemical search space**
    - File `virtual_search_space_1million.csv` inside the directory `datasets`: this is the original virtual search space containing 1 million electrolytes on which optimization is carried in this work.
    - Files named `virtual_search_space_for_batch*.csv` inside the directory `datasets/batch-*`: virtual search space for each subsequent active learnign campaign will be effectively the labeled electrolytes removed from the original search space. Therefore, different files are required for each batch.
-   - These files are not present in the GitHub repo as they are ~500 MB in size while GitHub only allows uploads upto 25 MB in size. They can be downloaded from [Box](https://uchicago.box.com/s/j1y6f74vfpnylpnm25nfe3k3onj9bz22) and then kept inside respective directories.
+   - These files are not present in the GitHub repo as they are ~500 MB in size while GitHub only allows uploads upto 25 MB in size. They can be downloaded from [Box](https://uchicago.box.com/s/8ffdqrfgf7v4fogxi4nkzl2dlw6fuj72) and then put inside respective directories.
 
 2. **Labeled datasets**
    - Files named `label_data_batch*.csv` inside the directory `datasets/batch-*`: labeled datasets obtained from preceding batches (used for training surrogate models in each batch along with in-house data) (from batch 2 onwards).
@@ -113,9 +121,10 @@ The following datasets are used in this project:
 ## Notebooks
 The repository includes codes (Jupyter notebooks) for different purposes inside:
 
-1. `notebooks/active-learning`: Contains `active_learning_batch_*.ipynb` files for each batch. Run the notebooks to reproduce active learning result for each batch.
-2. `notebooks/screening`: Contains notebooks for screening original unlabeled repositories (eMolecules, PubChem) based on undesired chemical moeities, synthesizability, & ionic conductivity
-3. `notebooks/manuscript-plots`: Contains notebooks for reproducing figures in the main text
+1. `notebooks/active-learning`: Contains `active_learning_batch_*.ipynb` files for each batch. Run the notebooks to reproduce active learning result for each batch (including all data in the initial training data).
+2. `notebooks/active-learning_only-LFP-data`: Contains `active_learning_batch_*.ipynb` files for each batch. Run the notebooks to reproduce active learning result for each batch (including all data in the initial training data).
+3. `notebooks/screening`: Contains notebooks for screening original unlabeled repositories (eMolecules, PubChem) based on undesired chemical moeities, synthesizability, & ionic conductivity
+4. `notebooks/manuscript-plots`: Contains notebooks for reproducing figures in the main text
 
 ## Model checkpoints
 All trained model checkpoints are stored inside directory `models/batch-*` containing four files named `pairwise_batch*.pkl`, `rq_batch*.pkl`, `matern_batch*.pkl`, and `rbf-ess_batch*.pkl` for each of the four surrogate models in each batch used in this study.
@@ -158,5 +167,11 @@ Install the required libraries using the provided `requirements.txt` file.
 ## Citation
 Please consider citing this work if you use our datasets or codes:
 ```plaintext
-
+@article{ma2025active,
+  title={Active learning accelerates electrolyte solvent screening for anode-free lithium metal batteries},
+  author={Ma, Peiyuan, and Kumar, Ritesh and Wang, Ke-Hsin, Peiyuan and Amanchukwu, Chibueze V.},
+  journal={Nature Communications},
+  year={2025},
+  doi={}
+}
 ```
