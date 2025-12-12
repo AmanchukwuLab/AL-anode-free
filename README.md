@@ -172,6 +172,8 @@ Please consider citing this work if you use our datasets or codes:
   author={Ma, Peiyuan, and Kumar, Ritesh and Wang, Ke-Hsin, and Amanchukwu, Chibueze V.},
   journal={Nature Communications},
   year={2025},
-  doi={}
+  volume={16},
+  pages={8396},
+  doi={https://doi.org/10.1038/s41467-025-63303-7}
 }
 ```
